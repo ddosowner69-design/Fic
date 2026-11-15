@@ -1,7 +1,8 @@
-FROM ubuntu:24.04
+FROM debian:bookworm-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+# Install SSH and required tools
 RUN apt-get update && apt-get install -y \
     openssh-server \
     sudo \
